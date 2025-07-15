@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalGames", "LocalGames\LocalGames.csproj", "{1E7645D0-8092-4767-A313-9127554A396B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		Jogo.cs = Jogo.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DTO", "DTO", "{412D191B-66E1-4922-8428-12B1D8AD25C3}"
+	ProjectSection(SolutionItems) = preProject
+		JogoDTO.cs = JogoDTO.cs
+		JogoRespostaDTO.cs = JogoRespostaDTO.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositories", "Repositories", "{B71CA909-8372-4BD6-BADE-9EB2A336B269}"
+	ProjectSection(SolutionItems) = preProject
+		JogoRepository.cs = JogoRepository.cs
+		IJogoRepository.cs = IJogoRepository.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E7645D0-8092-4767-A313-9127554A396B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E7645D0-8092-4767-A313-9127554A396B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E7645D0-8092-4767-A313-9127554A396B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E7645D0-8092-4767-A313-9127554A396B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EC409B46-063F-4CE2-85A6-7720FDE7EE3C}
+	EndGlobalSection
+EndGlobal
