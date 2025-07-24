@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PEDROHENRIQUEKONRADT\\Documents\\GitHub\\localgame\\LocalGames\\LocalGames.csproj": {}
+    "C:\\Users\\PEDROHENRIQUEKONRADT\\Documents\\GitHub\\localgame\\LocalGames\\LocalGames.Api.csproj": {}
   },
   "projects": {
     "C:\\Users\\PEDROHENRIQUEKONRADT\\Documents\\GitHub\\localgame\\LocalGames.Domain\\LocalGames.Domain.csproj": {
@@ -134,12 +134,12 @@
         }
       }
     },
-    "C:\\Users\\PEDROHENRIQUEKONRADT\\Documents\\GitHub\\localgame\\LocalGames\\LocalGames.csproj": {
+    "C:\\Users\\PEDROHENRIQUEKONRADT\\Documents\\GitHub\\localgame\\LocalGames\\LocalGames.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PEDROHENRIQUEKONRADT\\Documents\\GitHub\\localgame\\LocalGames\\LocalGames.csproj",
-        "projectName": "LocalGames",
-        "projectPath": "C:\\Users\\PEDROHENRIQUEKONRADT\\Documents\\GitHub\\localgame\\LocalGames\\LocalGames.csproj",
+        "projectUniqueName": "C:\\Users\\PEDROHENRIQUEKONRADT\\Documents\\GitHub\\localgame\\LocalGames\\LocalGames.Api.csproj",
+        "projectName": "LocalGames.Api",
+        "projectPath": "C:\\Users\\PEDROHENRIQUEKONRADT\\Documents\\GitHub\\localgame\\LocalGames\\LocalGames.Api.csproj",
         "packagesPath": "C:\\Users\\PEDROHENRIQUEKONRADT\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\PEDROHENRIQUEKONRADT\\Documents\\GitHub\\localgame\\LocalGames\\obj\\",
         "projectStyle": "PackageReference",

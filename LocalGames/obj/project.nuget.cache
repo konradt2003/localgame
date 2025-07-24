@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oHuhpUJa4eA=",
+  "dgSpecHash": "f+/1xW4ZOGU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\PEDROHENRIQUEKONRADT\\source\\repos\\LocalGames\\LocalGames\\LocalGames.csproj",
+  "projectFilePath": "C:\\Users\\PEDROHENRIQUEKONRADT\\Documents\\GitHub\\localgame\\LocalGames\\LocalGames.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PEDROHENRIQUEKONRADT\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\PEDROHENRIQUEKONRADT\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",

@@ -1,0 +1,12 @@
+C:\Users\PEDROHENRIQUEKONRADT\Documents\GitHub\localgame\LocalGames.Domain\bin\Debug\net8.0\LocalGames.Domain.deps.json
+C:\Users\PEDROHENRIQUEKONRADT\Documents\GitHub\localgame\LocalGames.Domain\bin\Debug\net8.0\LocalGames.Domain.dll
+C:\Users\PEDROHENRIQUEKONRADT\Documents\GitHub\localgame\LocalGames.Domain\bin\Debug\net8.0\LocalGames.Domain.pdb
+C:\Users\PEDROHENRIQUEKONRADT\Documents\GitHub\localgame\LocalGames.Domain\obj\Debug\net8.0\LocalGames.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PEDROHENRIQUEKONRADT\Documents\GitHub\localgame\LocalGames.Domain\obj\Debug\net8.0\LocalGames.Domain.AssemblyInfoInputs.cache
+C:\Users\PEDROHENRIQUEKONRADT\Documents\GitHub\localgame\LocalGames.Domain\obj\Debug\net8.0\LocalGames.Domain.AssemblyInfo.cs
+C:\Users\PEDROHENRIQUEKONRADT\Documents\GitHub\localgame\LocalGames.Domain\obj\Debug\net8.0\LocalGames.Domain.csproj.CoreCompileInputs.cache
+C:\Users\PEDROHENRIQUEKONRADT\Documents\GitHub\localgame\LocalGames.Domain\obj\Debug\net8.0\LocalGames.Domain.sourcelink.json
+C:\Users\PEDROHENRIQUEKONRADT\Documents\GitHub\localgame\LocalGames.Domain\obj\Debug\net8.0\LocalGames.Domain.dll
+C:\Users\PEDROHENRIQUEKONRADT\Documents\GitHub\localgame\LocalGames.Domain\obj\Debug\net8.0\refint\LocalGames.Domain.dll
+C:\Users\PEDROHENRIQUEKONRADT\Documents\GitHub\localgame\LocalGames.Domain\obj\Debug\net8.0\LocalGames.Domain.pdb
+C:\Users\PEDROHENRIQUEKONRADT\Documents\GitHub\localgame\LocalGames.Domain\obj\Debug\net8.0\ref\LocalGames.Domain.dll

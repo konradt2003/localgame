@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("LocalGames")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("LocalGames.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+472def4b0d287110d75f3b4dab570b4d120a0907")]
-[assembly: System.Reflection.AssemblyProductAttribute("LocalGames")]
-[assembly: System.Reflection.AssemblyTitleAttribute("LocalGames")]
+[assembly: System.Reflection.AssemblyProductAttribute("LocalGames.Domain")]
+[assembly: System.Reflection.AssemblyTitleAttribute("LocalGames.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.

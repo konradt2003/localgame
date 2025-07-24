@@ -88,6 +88,26 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "LocalGames.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/LocalGames.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LocalGames.Domain.dll": {}
+        }
+      },
+      "LocalGames.Infra/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/LocalGames.Infra.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LocalGames.Infra.dll": {}
+        }
       }
     }
   },
@@ -439,10 +459,22 @@
         "swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "LocalGames.Domain/1.0.0": {
+      "type": "project",
+      "path": "../LocalGames.Domain/LocalGames.Domain.csproj",
+      "msbuildProject": "../LocalGames.Domain/LocalGames.Domain.csproj"
+    },
+    "LocalGames.Infra/1.0.0": {
+      "type": "project",
+      "path": "../LocalGames.Infra/LocalGames.Infra.csproj",
+      "msbuildProject": "../LocalGames.Infra/LocalGames.Infra.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "LocalGames.Domain >= 1.0.0",
+      "LocalGames.Infra >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.6.2"
     ]
   },
@@ -453,11 +485,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PEDROHENRIQUEKONRADT\\source\\repos\\LocalGames\\LocalGames\\LocalGames.csproj",
-      "projectName": "LocalGames",
-      "projectPath": "C:\\Users\\PEDROHENRIQUEKONRADT\\source\\repos\\LocalGames\\LocalGames\\LocalGames.csproj",
+      "projectUniqueName": "C:\\Users\\PEDROHENRIQUEKONRADT\\Documents\\GitHub\\localgame\\LocalGames\\LocalGames.api.csproj",
+      "projectName": "LocalGames.api",
+      "projectPath": "C:\\Users\\PEDROHENRIQUEKONRADT\\Documents\\GitHub\\localgame\\LocalGames\\LocalGames.api.csproj",
       "packagesPath": "C:\\Users\\PEDROHENRIQUEKONRADT\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PEDROHENRIQUEKONRADT\\source\\repos\\LocalGames\\LocalGames\\obj\\",
+      "outputPath": "C:\\Users\\PEDROHENRIQUEKONRADT\\Documents\\GitHub\\localgame\\LocalGames\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -477,7 +509,14 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\PEDROHENRIQUEKONRADT\\Documents\\GitHub\\localgame\\LocalGames.Domain\\LocalGames.Domain.csproj": {
+              "projectPath": "C:\\Users\\PEDROHENRIQUEKONRADT\\Documents\\GitHub\\localgame\\LocalGames.Domain\\LocalGames.Domain.csproj"
+            },
+            "C:\\Users\\PEDROHENRIQUEKONRADT\\Documents\\GitHub\\localgame\\LocalGames.Infra\\LocalGames.Infra.csproj": {
+              "projectPath": "C:\\Users\\PEDROHENRIQUEKONRADT\\Documents\\GitHub\\localgame\\LocalGames.Infra\\LocalGames.Infra.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

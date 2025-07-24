@@ -1,0 +1,7 @@
+C:\Users\PEDROHENRIQUEKONRADT\Documents\GitHub\localgame\LocalGames\obj\Debug\net8.0\LocalGames.Api.csproj.AssemblyReference.cache
+C:\Users\PEDROHENRIQUEKONRADT\Documents\GitHub\localgame\LocalGames\obj\Debug\net8.0\LocalGames.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PEDROHENRIQUEKONRADT\Documents\GitHub\localgame\LocalGames\obj\Debug\net8.0\LocalGames.Api.AssemblyInfoInputs.cache
+C:\Users\PEDROHENRIQUEKONRADT\Documents\GitHub\localgame\LocalGames\obj\Debug\net8.0\LocalGames.Api.AssemblyInfo.cs
+C:\Users\PEDROHENRIQUEKONRADT\Documents\GitHub\localgame\LocalGames\obj\Debug\net8.0\LocalGames.Api.csproj.CoreCompileInputs.cache
+C:\Users\PEDROHENRIQUEKONRADT\Documents\GitHub\localgame\LocalGames\obj\Debug\net8.0\LocalGames.Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\PEDROHENRIQUEKONRADT\Documents\GitHub\localgame\LocalGames\obj\Debug\net8.0\LocalGames.Api.sourcelink.json

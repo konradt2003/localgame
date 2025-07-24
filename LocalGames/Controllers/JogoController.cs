@@ -1,99 +1,102 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using LocalGames.DTOs;
-using LocalGames.Model;
-using LocalGames.Repositories;
-using System;
-using System.Linq;
+using LocalGames.Domain.Dtos.Request;
+using LocalGames.Models.Jogo;
+using LocalGames.Models.Categoria;
+
+using LocalGames.Domain.Dtos.Services;
 
 namespace LocalGames.Controllers
 {
     [ApiController]
-    [Route("jogo")]
+    [Route("api/jogo")]
     public class JogoController : ControllerBase
     {
-        private static IJogoRepository _repository = new JogoRepository();
+        private readonly IJogoService _jogoService;
+
+        public JogoController(IJogoService jogoService) 
+        {
+            _jogoService = jogoService;
+        }
+
+
+        [HttpGet]
+        public async Task<IActionResult> ObterTodos()
+        {
+            var jogos = await _jogoService.ObterTodos();
+            return Ok(jogos);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> ObterDetalhado(long id)
+        {
+            var jogo = await _jogoService.ObterDetalhado(id);
+            if (jogo == null)
+                return NotFound("Jogo não encontrado.");
+            return Ok(jogo);
+        }
 
         [HttpPost]
-        public IActionResult CriarJogo([FromBody] JogoDTO dto)
+        public async Task<IActionResult> Cadastrar([FromBody] CadastrarJogoRequest request)
         {
-            // Validação simples
-            if (string.IsNullOrEmpty(dto.Titulo) || string.IsNullOrEmpty(dto.Descricao) || string.IsNullOrEmpty(dto.Categoria))
-            {
-                return BadRequest("Todos os campos são obrigatórios.");
-            }
+            if (!Enum.TryParse<CategoriaJogo>(request.Categoria, true, out var categoria))
+                return BadRequest("Categoria inválida.");
 
-            Categoria categoria;
-            if (!Enum.TryParse(dto.Categoria, true, out categoria))
+            var jogo = new Jogo
             {
-                return BadRequest("Categoria inválida. Use: BRONZE, PRATA ou OURO.");
-            }
-
-            var novoJogo = new Jogo
-            {
-                Titulo = dto.Titulo,
-                Descricao = dto.Descricao,
+                Titulo = request.Titulo,
+                Descricao = request.Descricao,
                 Categoria = categoria,
                 Disponivel = true,
                 Responsavel = null,
-                DataRetirada = null
+                DataDevolucaoLimite = null
             };
 
-            _repository.Adicionar(novoJogo);
+            var id = await _jogoService.CadastrarJogo(jogo);
 
-            return Created("", novoJogo);
+            return CreatedAtAction(nameof(ObterDetalhado), new { id = id }, jogo);
         }
 
-        [HttpGet]
-        public IActionResult ListarJogos()
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Atualizar(long id, [FromBody] CadastrarJogoRequest request)
         {
-            var jogos = _repository.ListarTodos();
+            if (!Enum.TryParse<CategoriaJogo>(request.Categoria, true, out var categoria))
+                return BadRequest("Categoria inválida.");
 
-            var resposta = jogos.Select(j => new JogoRespostaDTO
+            var jogo = new Jogo
             {
-                Id = j.Id,
-                Titulo = j.Titulo,
-                Disponivel = j.Disponivel,
-                Categoria = j.Categoria.ToString(),
-                DataRetirada = j.DataRetirada,
-                IsEmAtraso = j.DataRetirada.HasValue && j.DataRetirada.Value.Date < DateTime.Now.Date
-            }).ToList();
+                Id = id,
+                Titulo = request.Titulo,
+                Descricao = request.Descricao,
+                Categoria = categoria,
+                Disponivel = true,
+                Responsavel = null,
+                DataDevolucaoLimite = null
+            };
 
-            return Ok(resposta);
+            await _jogoService.AtualizarJogo(id, jogo);
+
+            return NoContent();
         }
 
-        [HttpPut("{id}/alugar")]
-        public IActionResult AlugarJogo(long id, [FromQuery] string responsavel)
+        [HttpPost("alugar")]
+        public async Task<IActionResult> Alugar([FromBody] Jogo jogo)
         {
-            var jogo = _repository.ObterPorId(id);
-            if (jogo == null)
-                return NotFound("Jogo não encontrado.");
-
-            if (!jogo.Disponivel)
-                return BadRequest("Jogo não está disponível para locação.");
-
-            jogo.Disponivel = false;
-            jogo.Responsavel = responsavel ?? "Desconhecido";
-
-         
-            switch (jogo.Categoria)
-            {
-                case Categoria.BRONZE:
-                    jogo.DataRetirada = DateTime.Now.AddDays(9);
-                    break;
-                case Categoria.PRATA:
-                    jogo.DataRetirada = DateTime.Now.AddDays(6);
-                    break;
-                case Categoria.OURO:
-                    jogo.DataRetirada = DateTime.Now.AddDays(3);
-                    break;
-                default:
-                    return BadRequest("Categoria inválida.");
-            }
-
-            _repository.Atualizar(jogo);
-
-            return Ok("Jogo alugado com sucesso!");
+            await _jogoService.AlugarJogo(jogo);
+            return Ok("Jogo alugado com sucesso.");
         }
 
+        [HttpPost("retornar/{id}")]
+        public async Task<IActionResult> Retornar(long id)
+        {
+            await _jogoService.RetornarJogo(id);
+            return Ok("Jogo devolvido com sucesso.");
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Apagar(long id)
+        {
+            await _jogoService.ApagarJogo(id);
+            return Ok("Jogo removido.");
+        }
     }
 }

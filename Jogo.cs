@@ -1,18 +1,10 @@
-﻿namespace LocalGames.Model
+﻿public class Jogo
 {
-    public enum Categoria
-    {
-        BRONZE, PRATA, OURO
-    }
-
-    public class Jogo
-    {
-        public long Id { get; set; }
-        public string Titulo { get; set; }
-        public string Descricao { get; set; }
-        public Categoria Categoria { get; set; }
-        public bool Disponivel { get; set; }
-        public string? Responsavel { get; set; }
-        public DateTime? DataRetirada { get; set; }
-    }
+    public long Id { get; set; }
+    public string Titulo { get; set; }
+    public string Descricao { get; set; }
+    public Categoria Categoria { get; set; }
+    public bool Disponivel { get; set; }
+    public string Responsavel { get; set; }
+    public DateTime? DataDevolucaoLimite { get; set; } 
 }
